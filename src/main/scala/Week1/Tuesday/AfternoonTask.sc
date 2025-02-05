@@ -14,7 +14,7 @@ val result = if (17 % 2 == 0) "even" else "odd"
 
 /**
  * Question 2
- *  The difference between a string and a print line is that the string is a data type that represents a sequence of characters and is a value that you can manipulate and store. Whereas the print line is a function that outputs text to the console. It takes tge text as an argument and displays it on the screen, and it is not stored.
+ *  The difference between a string and a print line is that the string is a data type that represents a sequence of characters and is a value that you can manipulate and store. Whereas the print line is a function that outputs text to the console. It takes the text as an argument and displays it on the screen, and it is not stored.
  */
 
 //Question 3
