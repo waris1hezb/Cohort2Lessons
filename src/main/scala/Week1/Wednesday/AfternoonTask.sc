@@ -18,7 +18,7 @@ println(canCarry)
 // 4. Create a boolean value for whether John has a bag
 val hasBag: Boolean = true
 
-// 5. Use an if-statement with `hasBag` (without using else-if)
+// 5. Use an if-statement with `hasBag`
 if (hasBag && noOfWatermelons <= 5) {
   println("John can carry the watermelons.")
 } else if (!hasBag && noOfWatermelons <= 3) {
@@ -46,8 +46,8 @@ println(costMessage)
  */
 
 //2,3,4.
-val result1 = true || false && false   // true (&& has higher precedence than ||)
-val result2 = (true || false) && false // false
+val result1 = (true || false && false)   // true (&& has higher precedence than ||)
+val result2 = ((true || false) && false) // false
 val result3 = (1 < 4 && 8.7 != 10 || 9 + 10 == 21)
 
 
