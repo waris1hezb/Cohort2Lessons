@@ -47,11 +47,11 @@ val seqFiltered: Seq[Int] = numsSeq.filter(
 )
 
 //2
-val thirdsElement = nums.tail.tail.head
+val thirdsElement: Int = nums.tail.tail.head
 
 //Research
 //1.
-// Sets are a collection of unique elements. they don't allow duplicates. Use when you need unique values. Sequenes maintains insertion order and allows duplicates
+// Sets are a collection of unique elements. they don't allow duplicates. Use when you need unique values. Sequences maintains insertion order and allows duplicates
 
 //2.
 List(3,4) == Seq(3,4)
