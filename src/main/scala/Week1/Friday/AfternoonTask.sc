@@ -41,26 +41,4 @@ def gradingSystem(math: Int, science: Int, english: Int): String = {
 
 gradingSystem(70,75,85)
 
-def gradingSystem(math: Int, science: Int, english: Int): String = {
-
-  // Validate input scores
-  if (math < 0 || math > 100 || science < 0 || science > 100 || english < 0 || english > 100)
-    return "Invalid score"
-
-  // Calculate precise average
-  val averageScore = (math + science + english) / 3.0  // Use Double division
-
-  // Determine grade based on average
-  if (averageScore >= 90) "A"
-  else if (averageScore >= 80) "B"
-  else if (averageScore >= 70) "C"
-  else if (averageScore >= 60) "D"
-  else if (averageScore >= 50) "E"
-  else "F"
-}
-
-// Test the function
-gradingSystem(70, 75, 85) // Output: C
-gradingSystem(120, 80, 90)// Output: Invalid score
-gradingSystem(45, 89, 60) // Output: D
 
