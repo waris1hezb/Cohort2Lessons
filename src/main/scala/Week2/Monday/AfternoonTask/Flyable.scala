@@ -5,3 +5,5 @@ trait Flyable {
   def wingSpan: Int
   def fly(): String = if (canFly) "I am flying!" else "I cannot fly."
 }
+
+//Traits act as reusable behaviours

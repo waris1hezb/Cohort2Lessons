@@ -10,4 +10,5 @@ class Animal(val name: String, val age: Int) {
 object Animal {
   def apply(name: String, age: Int): Animal = new Animal(name, age)
 }
+//Companion Object
 //Allows you to create animals object without using new.
