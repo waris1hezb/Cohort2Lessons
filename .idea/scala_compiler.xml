@@ -2,6 +2,6 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="separateProdTestSources" value="true" />
-    <profile name="sbt 1" modules="documents" />
+    <profile name="sbt 1" modules="Mercator_Cohort2Lessons,Mercator_Cohort2Lessons.main,Mercator_Cohort2Lessons.test,documents" />
   </component>
 </project>

@@ -15,20 +15,21 @@ object AfternoonTask extends App {
    * Automatically generates toString, equals, hashCode methods.
    * Can be instantiated without new.
    * Immutable by default (parameters are val by default).
+   * == compares values and not memory location
    */
 
 
   //2
   case class Person(name: String, age: Int, nationality: String, isStudent: Boolean)
 
-  val firstPerson = new Person("Carlos", 23, "Spanish", true) //(Error: case classes don’t require `new`)
-  val secondPerson = Person("Carlos", 23, "Spanish", true) //Valid)
-  val thirdPerson = Person("Chloe", 25, "British", false) //(Valid)
+  val firstPerson = new Person("Carlos", 23, "Spanish", true) //Valid: case classes don’t require new but still works
+  val secondPerson = Person("Carlos", 23, "Spanish", true) // Valid
+  val thirdPerson = Person("Chloe", 25, "British", false) // Valid
 
   class Animal(name: String, colour: String, pet: Boolean)
 
-  val cat = Animal("cat", "black", true) //(Error: Missing `new`)
-  val dog = new Animal("dog", "white", true) //(Valid)
+  val cat = Animal("cat", "black", true)     //Error: Missing `new`
+  val dog = new Animal("dog", "white", true)   explain everything i need to know about estd//Valid
 
 
   //3
