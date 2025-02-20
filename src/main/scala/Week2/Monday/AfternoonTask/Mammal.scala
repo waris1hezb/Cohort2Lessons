@@ -17,3 +17,6 @@ object Mammal {
   def apply(name: String, age: Int, furColour: String, hasTail: Boolean): Mammal =
     new Mammal(name, age, furColour, hasTail)
 }
+
+
+Use classes,case classes, abstract classes, TDD, functions method, collections, if else, string interpolations

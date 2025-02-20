@@ -13,7 +13,7 @@ class getNameLengthSpec extends AnyWordSpec with Matchers{
 
   "getNameLength" should {
 
-    "Length of firstname" when {
+    "return length of firstname" when {
 
       "firstname length is > surname length" in {
         name1 shouldBe 5
