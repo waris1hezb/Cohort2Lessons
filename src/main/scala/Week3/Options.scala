@@ -47,17 +47,17 @@ object Options extends App {
   println(newPizza.crust.getOrElse("classic")) //either gets the contents or returns the default
 
 
-  case class ChocloteBar(filling:Option[String])
-
-  def getFilling(chocloteBar: ChocloteBar): String = chocloteBar.filling.getOrElse("just choclote")
-
-
-  val chocloteBar = Choclote(Some("caramel"))
-  val chocloteBarNew = Choclote(None)
-
-  println(chocloteBar.filling.getOrElse("classic"))
-  println(chocloteBarNew.filling.getOrElse("classic"))
-
-
-
+//  case class ChocloteBar(filling:Option[String])
+//
+//  def getFilling(chocloteBar: ChocloteBar): String = chocloteBar.filling.getOrElse("just choclote")
+//
+//
+//  val chocloteBar = Choclote(Some("caramel"))
+//  val chocloteBarNew = Choclote(None)
+//
+//  println(chocloteBar.filling.getOrElse("classic"))
+//  println(chocloteBarNew.filling.getOrElse("classic"))
+//
+//
+//
 }
