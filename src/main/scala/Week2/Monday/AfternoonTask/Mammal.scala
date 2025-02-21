@@ -19,4 +19,3 @@ object Mammal {
 }
 
 
-Use classes,case classes, abstract classes, TDD, functions method, collections, if else, string interpolations
