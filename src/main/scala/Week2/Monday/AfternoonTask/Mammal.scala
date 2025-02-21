@@ -17,3 +17,5 @@ object Mammal {
   def apply(name: String, age: Int, furColour: String, hasTail: Boolean): Mammal =
     new Mammal(name, age, furColour, hasTail)
 }
+
+

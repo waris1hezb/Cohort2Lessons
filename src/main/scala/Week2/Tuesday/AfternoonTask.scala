@@ -28,8 +28,8 @@ object AfternoonTask extends App {
 
   class Animal(name: String, colour: String, pet: Boolean)
 
-  val cat = Animal("cat", "black", true)     //Error: Missing `new`
-  val dog = new Animal("dog", "white", true)   explain everything i need to know about estd//Valid
+//  val cat = Animal("cat", "black", true)     //Error: Missing `new`
+//  val dog = new Animal("dog", "white", true)   //explain everything i need to know about estd//Valid
 
 
   //3
