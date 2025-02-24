@@ -1,4 +1,4 @@
-package Week3
+package Week3.Thursday
 
 object Options extends App {
 
