@@ -12,21 +12,22 @@ object Recursion extends App {
   //once base case is reached, it will resolve in reverse order
 
 
-  def factorial(n:Int):Int = {
+  def factorial(n: Int): Int = {
 
-    if (n ==0) {1       //base case
+    if (n == 0) {
+      1 //base case
 
-  }
-    else
-    {
+    }
+    else {
       println(s"Incoming n is $n")
-      n * factorial(n-1)  //recursive case
+      n * factorial(n - 1) //recursive case
     }
   }
-println(factorial(5))
-println(factorial(4))
 
-//pseudocode = factorial(4)
+  println(factorial(5))
+  println(factorial(4))
+
+  //pseudocode = factorial(4)
   // factorial(4) --> 4 factor(4-1) --> factorial(3) 4 x 3 x 2 x 1 x 1 = 24
   // factorial(3) --> 3 factor(3-1) --> factorial(2) 3 x 2 x 1 x 1
   // factorial(2) --> 2 factor(2-1) --> factorial(1) 2 x 1 x 1
@@ -34,12 +35,11 @@ println(factorial(4))
   // factorial(0) --> Hitting base case --> return 1
 
 
-
   // Stack overflow error - there is only so much memory in the call stack. If this is exceeded we get this error
 
   //println(factorial(10000))
 
-// Tail Recursion
+  // Tail Recursion
 
   // Smarter way to write recursion because it stops stack overflow errors.
   // Key differences:
@@ -51,26 +51,28 @@ println(factorial(4))
 
   //helper method
 
-  def smarterFactorial(n:Int):Int = {
+  def smarterFactorial(n: Int): Int = {
     @tailrec
-    def factorialHelper(x:Int, acc:Int):Int = {  // helper -  we don't have to change the original method signature
-      if (x == 0) acc   //acc - stores the intermediate value, dont need to have a large memory as call stack is being updated each time.
+    def factorialHelper(x: Int, acc: Int): Int = { // helper -  we don't have to change the original method signature
+      if (x == 0) acc //acc - stores the intermediate value, dont need to have a large memory as call stack is being updated each time.
       else {
         println(s"\ncurrent x = $x")
         println(s"current acc =  $acc")
-        factorialHelper(x-1, x * acc)
+        factorialHelper(x - 1, x * acc)
         // x-1 --> moving down our numbers list
         // acc * x --> running total
       }
     }
-    factorialHelper(n,1)  // call the helper, pass in the original n so we start the recursion at the top level, acc will start at the base case(if statement)
+
+    factorialHelper(n, 1) // call the helper, pass in the original n so we start the recursion at the top level, acc will start at the base case(if statement)
 
   }
-smarterFactorial(4)
-smarterFactorial(5)
+
+  smarterFactorial(4)
+  smarterFactorial(5)
 
 
-// tail recursion without helper
+  // tail recursion without helper
 
   def smarterFactorialWithoutHelper(n: Int, acc: Int = 1): Int = {
     if (n == 0) acc // Base case
@@ -80,9 +82,36 @@ smarterFactorial(5)
   println(smarterFactorialWithoutHelper(5)) // Output: 120
 
 
+  def concatenteWords(aWord: String, n: Int, acc: String): String = {
+
+    if (n <= 0) acc
+    else {
+      println(s" current aWord $aWord")
+      println(s" current acc $acc")
+      concatenteWords(aWord, n - 1, aWord + acc)
+    }
+  }
+
+  println(concatenteWords("Hello World! ", 3, ""))
 
 
+  def elementsInList(list: List[String]): Int = {
+    if (list.isEmpty) 0
+    else {
+      println(s"correct $list")
+      1 + elementsInList(list.tail)
+    }
+  }
+  println(elementsInList(List("a", "b", "d", "e")))
 
-
+  @tailrec
+  def elementsInListTail(list: List[String], acc:Int = 0): Int = {
+    if (list == List()) acc
+    else {
+      println(s"correct $list")
+      elementsInListTail(list.tail, 1 + acc)
+    }
+  }
 
 }
+
